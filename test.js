@@ -46,7 +46,7 @@ test(function( t ){
 
 	var list = [ 1, 2, 3 ];
 
-	toPromise(fromPromise(Promise.resolve(list), true), null).then(function( v ){
+	toPromise(fromPromise(Promise.resolve(list), true), true).then(function( v ){
 		t.notEqual(v, list);
 		t.deepEqual(v, list);
 	});
@@ -57,7 +57,7 @@ test(function( t ){
 
 	var list = [];
 
-	toPromise(fromPromise(Promise.resolve(list), true), null).then(function( v ){
+	toPromise(fromPromise(Promise.resolve(list), true), true).then(function( v ){
 		t.notEqual(v, list);
 		t.deepEqual(v, list);
 	});
@@ -68,7 +68,7 @@ test(function( t ){
 
 	var list = [ 1 ];
 
-	toPromise(fromPromise(Promise.resolve(list), true), null).then(function( v ){
+	toPromise(fromPromise(Promise.resolve(list), true), true).then(function( v ){
 		t.notEqual(v, list);
 		t.deepEqual(v, list);
 	});
